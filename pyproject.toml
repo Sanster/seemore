@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seemore"
+version = "0.1.0"
+authors = [{ name = "Sanster", email = "cwq1913@gmail.com" }]
+description = "A short description of your package"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["opencv-python", "torch>=1.8.0"]
+
+[project.urls]
+"Homepage" = "https://github.com/Sanster/seemore"
+"Bug Tracker" = "https://github.com/Sanster/seemore/issues"
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests"]
