@@ -1,14 +1,14 @@
 # See More Details: Efficient Image Super-Resolution by Experts Mining
 
 <a href="https://github.com/Sanster/SeemoRe">
-<img alt="total download" src="https://pepy.tech/badge/seemore" />
+    <img alt="total download" src="https://pepy.tech/badge/seemore" />
 </a>
 
 This project wraps the code and models from [seemoredetails](https://github.com/eduardzamfir/seemoredetails) to make it easier to use.
 
-| Input                      | Output (4x upscaled)                        |
-| -------------------------- | ------------------------------------------- |
-| ![bunny](tests/bunny.jpeg) | ![bunny_upscaled](tests/bunny_upscaled.jpg) |
+| Input                                                  | Output (4x upscaled)                                           |
+| ------------------------------------------------------ | -------------------------------------------------------------- |
+| <img src="tests/bunny.jpeg" height="420" width="auto"> | <img src="tests/bunny_upscaled.jpg" height="420" width="auto"> |
 
 ## Installation
 
