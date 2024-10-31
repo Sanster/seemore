@@ -95,3 +95,32 @@ def test_device_upscaling(device):
     assert result.shape[1] == w * 4
     assert result.shape[2] == 3  # BGR channels
     assert result.dtype == np.uint8
+
+
+@pytest.mark.parametrize(
+    "model_name",
+    [
+        "seemore_b_x2",
+        "seemore_b_x3",
+        "seemore_b_x4",
+        "seemore_t_x2",
+        "seemore_t_x3",
+        "seemore_t_x4",
+    ],
+)
+def test_all_models(model_name):
+    """Test all available model configurations"""
+    seemore = SeemoReUpscaler(model_name, device="cpu")
+    img = cv2.imread(test_img_path)
+    h, w = img.shape[:2]
+
+    result = seemore(img)
+
+    # Get expected scale from model name
+    scale = int(model_name[-1])
+
+    # Check output dimensions match the model's scale factor
+    assert result.shape[0] == h * scale
+    assert result.shape[1] == w * scale
+    assert result.shape[2] == 3  # BGR channels
+    assert result.dtype == np.uint8
