@@ -6,6 +6,10 @@
 
 This project wraps the code and models from [seemoredetails](https://github.com/eduardzamfir/seemoredetails) to make it easier to use.
 
+| Input                      | Output (4x upscaled)                        |
+| -------------------------- | ------------------------------------------- |
+| ![bunny](tests/bunny.jpeg) | ![bunny_upscaled](tests/bunny_upscaled.jpg) |
+
 ## Installation
 
 ```bash
